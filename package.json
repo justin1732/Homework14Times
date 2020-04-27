@@ -1,0 +1,32 @@
+{
+  "name": "homework14times",
+  "version": "1.0.0",
+  "description": "New York Times Scraper",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justin1732/Homework14Times.git"
+  },
+  "keywords": [
+    "New",
+    "York",
+    "Times"
+  ],
+  "author": "Justin Tucker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justin1732/Homework14Times/issues"
+  },
+  "homepage": "https://github.com/justin1732/Homework14Times#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.3",
+    "mongoose": "^5.9.10"
+  }
+}

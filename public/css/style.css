@@ -1,0 +1,63 @@
+body {
+    background-image: url(../img/oldey.jpg);
+    background-position:center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.btn-danger{
+    background-color: #660000;
+    border-color: #990000
+}
+
+.btn-danger:hover {
+    background-color: lightblue;
+    border-color: darkblue;
+}
+
+.panel-default>.panel-heading {
+    background-color: gray;
+    color: darkblue
+}
+
+.panel-default {
+    border-color: gray;
+}
+
+.artLink {
+    color: seagreen;
+}
+
+.saved-buttons {
+    margin-right: 1em;
+}
+
+.deletex {
+    color: brown
+}
+
+.modal-body {
+    background-image: url(../img/parchy.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.alert-warning {
+    color: snow;
+    background-color: darkolivegreen;
+    border-bottom:darkolivegreen;
+}
+
+.main-img {
+    margin-bottom: 2em;
+    border-top: 2px solid olivedrab;
+    border-bottom: 2px solid olive;
+}
+
+.savedArt {
+    margin: 0 auto;
+    width: 80%;
+}
