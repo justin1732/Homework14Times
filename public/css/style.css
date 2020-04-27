@@ -1,63 +1,172 @@
+:root {
+    --header-height: 30em;
+}
+
 body {
     background-image: url(../img/oldey.jpg);
-    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 100% 200%;    
+    background-position:center center;
+    font-size: 62%;
+    margin: 0;
+    padding: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a:active {
+    outline: none;
+}
+button:focus{
+    outline:none;
 }
 
 h1, h2, h3, h4 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.storyPanel {
+    background-image: url('../img/panely.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #add;
+    padding: 20px;
+    border-radius: 20px 0 20px 0;
+    border: 3px solid #ddd;
+    position: relative;
+    margin: 50px 20px;
+    opacity: 0.9;
+}
+.imgBox {
+    overflow: hidden;
+    border: 3px solid #ddd;
+}
+.imgBox:hover .storyImg{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.storyImg {
+    float: right;
+    -webkit-transition: -webkit-transform 300ms ease;
+    transition: -webkit-transform 300ms ease;
+    transition: transform 300ms ease;
+    transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
 
+.storySummary {
+    font-size: 2.5em;
+}
+
+.storyButton {
+    font-size: 2.5 em;
+    padding: 5px 30px;
+    border: 3px solid #ddd;
+    background: gray;
+    font-weight: 600;
+    color: palegoldenrod;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    margin-right: 10px;
+    border-radius: 10px 0 10px 0;
+}
+
+.storyButton:hover{
+    color: palegoldenrod;
+    background: purple;
+    border: 3px solid palegoldenrod;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.modal-content {
+    background-image: url('../img/parchy.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center 12%;
+    border-radius: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: palegoldenrod;
+}
+
+.modal-body{
+    padding-top: 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.noteInput {
+    width: 100%;
+    height: 2em;
+    background: transparent;
+    border: none;
+    font-size: 2em;
+    border-bottom: 2px solid goldenrod;
+}
+
+#submitNote{
+    background: transparent;
+    border: 2px solid palegoldenrod;
+}
+
+.instructions {
+    display: inline-block;
+    margin-right: 5em;
+}
+
+.note {
+    background: transparent;
+    margin-top: 5px;
+    height: 3em;
+    position: relative;
+    cursor:pointer;
+}
+
+.noteTitle{
+    display: inline-block;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.deleteNote{
+    font-size: 2.5em;
+    background: transparent;
+    color: palegoldenrod;
+    border: none;
+}
 .btn-danger{
     background-color: #660000;
     border-color: #990000
 }
 
-.btn-danger:hover {
-    background-color: lightblue;
-    border-color: darkblue;
+.button-dark {
+    font-size: 2.2em;
+    padding: 0.7em 1.3em;
+    font-weight: 600;
+    border: none;
+    background: darkblue;
+    color: lightblue;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+    margin: 1em 1em 1em 0.25em;
+    }
+
+.button-dark:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
-.panel-default>.panel-heading {
-    background-color: gray;
-    color: darkblue
+.button-group{
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
-.panel-default {
-    border-color: gray;
+#viewedSaved{
+    left: 11.5%;
 }
 
-.artLink {
-    color: seagreen;
-}
-
-.saved-buttons {
-    margin-right: 1em;
-}
-
-.deletex {
-    color: brown
-}
-
-.modal-body {
-    background-image: url(../img/parchy.jpg);
-    background-size: cover;
-    background-position: center;
-}
-
-.alert-warning {
-    color: snow;
-    background-color: darkolivegreen;
-    border-bottom:darkolivegreen;
-}
-
-.main-img {
-    margin-bottom: 2em;
-    border-top: 2px solid olivedrab;
-    border-bottom: 2px solid olive;
-}
-
-.savedArt {
-    margin: 0 auto;
-    width: 80%;
+.filler {
+    width: 100%;
+    height: var(--header-height);
 }

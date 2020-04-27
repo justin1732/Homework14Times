@@ -1,4 +1,4 @@
-var mongoose = require ('mongoose');
+CustomElementRegistry mongoose = require ('mongoose');
 
 var Schema = mongoose.Schema;
 
@@ -7,4 +7,4 @@ title: String,
 body: String,
 });
 
-var Note = module.exports = mongoose.model ("Note", noteSchema);
+const Note = module.exports = mongoose.model ("Note", noteSchema);
