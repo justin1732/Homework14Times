@@ -31,12 +31,12 @@ app.use('/notes', express.static(path.join(__dirname, 'public')));
 const index = require('./routes/index')
 const articles = require('./routes/articles')
 const notes = require('./routes/notes')
-const scrape = require('./routes/index')
+const scrape = require('./routes/scrape')
 
 app.use('/', index)
 app.use('/articles', articles);
 app.use('/notes', notes);
-app.use('/index', scrape);
+app.use('/scrape', scrape);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, function () {

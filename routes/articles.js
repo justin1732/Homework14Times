@@ -1,6 +1,6 @@
-var express = require ("express");
-var router = express.Router();
-var db = require ("../models");
+const express = require ("express");
+const router = express.Router();
+const db = require ("../models");
 
 router.get(('/save/:id'), (req, res) => {
     db.Article
