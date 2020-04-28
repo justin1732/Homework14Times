@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 app.use('/articles', express.static(path.join(__dirname, 'public')));
 app.use('/notes', express.static(path.join(__dirname, 'public')));
 
@@ -33,7 +33,7 @@ const articles = require('./routes/articles')
 const notes = require('./routes/notes')
 const scrape = require('./routes/scrape')
 
-app.use('/', index)
+app.use('/', index);
 app.use('/articles', articles);
 app.use('/notes', notes);
 app.use('/scrape', scrape);
