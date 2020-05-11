@@ -31,7 +31,7 @@
     "mongoose": "^5.9.10",
     "morgan": "^1.10.0",
     "request": "^2.88.2",
-    "request-promise": "^4.2.5",
+    "request-promise": "^4.2.5",    
     "yarn": "^1.22.4"
   }
 }

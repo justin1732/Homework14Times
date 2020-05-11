@@ -7,4 +7,4 @@ title: String,
 body: String,
 });
 
-const Note = module.exports = mongoose.model ("Note", noteSchema);
+const Note = module.exports = mongoose.model ('Note', noteSchema);

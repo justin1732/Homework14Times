@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url(../img/oldey.jpg);
+    background-image: url('../img/oldey.jpg');
     background-repeat: no-repeat;
     background-size: 100% 200%;    
     background-position:center center;
@@ -23,6 +23,19 @@ button:focus{
 h1, h2, h3, h4 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.header {
+    background-image: url('../img/oldey.jpg');
+    /* background-color: #181818; */
+    background-size: 40% 40%;
+    background-repeat: no-repeat;
+    background-position: center 35%;
+    position: fixed;
+    width: 100%;
+    height: var(--header-height);
+    z-index: 100;
+    border-bottom: 5px solid rgba(255,255,255,0.2);
+  }
 .storyPanel {
     background-image: url('../img/panely.jpg');
     background-repeat: no-repeat;
