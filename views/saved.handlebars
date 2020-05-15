@@ -1,0 +1,58 @@
+<div class="home-image">
+  <h1 class="home-title">Saved Articles!</h1>
+</div>
+<div class="articles row">
+  
+  {{#each saved}}
+  <div class="card bg-dark text-white col-md-6">
+    <img src={{this.image}} class="card-img" alt="article image">
+    <div class="card-img-overlay">
+      <a href={{this.link}} target="_blank">
+        <h1 class="card-title">{{this.title}}</h1>
+      </a>
+      <p class="card-text">{{this.summary}}</p>
+      <!--Modal-->
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary notes" data-id={{this._id}} data-toggle="modal"
+        data-target="#{{this._id}}">
+        Note
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id={{this._id}} tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Notes</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              {{#each this.notes}}
+              <p>{{this.body}}</p>
+              <p>{{this.created}}
+                   <button class="btn deleteNote" data-id={{this._id}}>X</button>
+              </p>
+              {{/each}}
+              <form class="notesForm" data-id={{this._id}}>
+                <textarea name="body" id="note-{{this._id}}" placeholder="Make a note..."></textarea>
+                <button type="submit" class="btn btn-primary submit" data-id={{this._id}}>Submit Note</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <button 
+        class="btn delete-one" 
+        data-id={{this._id}}
+        >Delete Article</button>
+    </div>
+  </div>
+  {{/each}}
+</div>

@@ -1,10 +1,18 @@
-const mongoose = require ('mongoose');
+const mongoose = require("mongoose");
 
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
-var noteSchema = new Schema({
-title: String,
-body: String,
+const NotesSchema = new Schema ({
+    body: {
+        type: String,
+        required: true
+    },
+    created: {
+        type: Date,
+        default: Date.now()
+    }
 });
 
-const Note = module.exports = mongoose.model ('Note', noteSchema);
+const Notes = mongoose.model("Notes", NotesSchema);
+
+module.exports = Notes;
