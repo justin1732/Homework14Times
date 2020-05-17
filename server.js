@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
         .find({saved: false})
         .populate("notes")
         .then(dbArticles => {
-            //console.log(dbComments)
+            
             res.render("home", { articles: dbArticles});
         })
 });
@@ -64,7 +64,7 @@ app.post("/api/:articleId/notes", (req, res) => {
     db.Notes
         .create({ body: req.body.body })
         .then(dbNotes => {
-            console.log("commented")
+            console.log("Noted!")
             return db.Article.findOneAndUpdate({ _id: req.params.articleId }, { $push: { notes: dbNotes._id } }, { new: true })
         })
         .then(dbNotes => res.send(dbNotes))
@@ -105,6 +105,7 @@ app.get("/saved", (req, res) => {
       .populate("notes")
       .then(dbArticles => res.render("saved", {saved: dbArticles}))
 })
+
 app.listen(PORT, function () {
   console.log(`Listening on http://localhost:${PORT}`)
 });
