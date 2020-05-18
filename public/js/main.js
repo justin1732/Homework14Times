@@ -1,5 +1,3 @@
-import { response } from "express";
-
 $(document).on("click", ".save", function(){
   let id = $(this).attr("data-id");
   $.ajax({
