@@ -5,6 +5,9 @@ const cheerio = require("cheerio");
 const db = require("./models");
 const PORT = process.env.PORT || 3000;
 const app = express();
+const CORS= require ("cors");
+app.use(CORS());
+
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
@@ -51,6 +54,7 @@ app.get("/scrape", (req, res) => {
                 db.Article
                     .create(post)
                     .then(dbArticle => { 
+                        // res.json(dbArticle)
                     })
                     .catch(err => console.log(err))
             })

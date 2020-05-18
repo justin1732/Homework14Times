@@ -1,3 +1,5 @@
+import { response } from "express";
+
 $(document).on("click", ".save", function(){
   let id = $(this).attr("data-id");
   $.ajax({
@@ -37,7 +39,6 @@ $(document).on("click", ".deleteNote", function(){
       location.reload();
   })
 })
-
 
 $(document).on("click", ".submit", function() {
   event.preventDefault();
